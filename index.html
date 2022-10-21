@@ -10,9 +10,24 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- javascript -->
-    <script src="javascript/script.js"></script>
+    <script src="javascript/script.js" defer></script>
 </head>
 <body>
-    
+   
+        <input id="user__name" type="text" placeholder="Nome e Cognome">
+        <input type="number">
+        <select name="" id="age_select">
+            <option value="maggiorenne">Maggiorenne</option>
+            <option value="minorenne">Minorenne</option>
+            <option value="over">Over 65</option>
+        </select>
+        <button id="button">Genera</button>
+
+
+    <div class="ticket">
+        <div><span id="name"></span></div>
+        <div><span class="sector"></span></div>
+        <div><span class="ticket__price"></span></div>
+    </div>
 </body>
 </html>
