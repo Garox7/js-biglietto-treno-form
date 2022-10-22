@@ -11,27 +11,86 @@
 
     <!-- javascript -->
     <script src="javascript/script.js" defer></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
+    <header>
+        <div class="header__container">
+            <div class="header__icon">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
 
-    <main class="container">
-        <input id="user_name" type="text" placeholder="Nome e Cognome">
-        <input id="distance" type="number">
-        <select id="age_select">
-            <option value="" >--Seleziona--</option>
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="minorenne">Minorenne</option>
-            <option value="over">Over 65</option>
-        </select>
-        <button id="button">Genera</button>
-
-
-        <div class="ticket">
-            <div><p>Nome passeggero:</p><span id="name"></span></div>
-            <div><span class="sector"></span></div>
-            <div><p>Costo biglietto</p><span id="ticket_price"></span></div>
+            <div class="header__icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
+        <h1 class="header__title">Calcola il prezzo del tuo biglietto</h1>
+            
+    </header>
+
+    <main>
+        <div class="main__container">
+
+            <div class="main__input">
+                <div class="main__input__box">
+                    <input id="user_name" type="text" placeholder="Inserisci il tuo Nome">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+
+            <div class="main__input">
+                <div class="main__input__box">
+                    <input id="distance" type="number" placeholder="Quanti Km percorrerai?">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+            </div>
+
+            <div class="main__input">
+                <div class="main__input__box">
+                    <select id="age_select">
+                        <option value="" >Seleziona la fascia d'eta</option>
+                        <option value="maggiorenne">Maggiorenne</option>
+                        <option value="minorenne">Minorenne</option>
+                        <option value="over">Over 65</option>
+                    </select>
+                    <i class="fa-solid fa-cake-candles"></i>
+                </div>
+            </div>
+
+            <button id="button">Genera</button>
+        </div>
+
+
+        <!-- <div class="ticket">
+            <div class="ticket__close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div>
+                <p>Nome passeggero</p>
+                <span id="name"></span>
+            </div>
+            <div>
+                <p>Offerta</p>
+                <span id="offer"></span>
+            </div>
+            <div>
+                <p>Carrozza</p>
+                <span class="sector"></span>
+            </div>
+            <div>
+                <p>Codice prenotazione</p>
+                <span id=""></span>
+            </div>
+            <div>
+                <p>Costo biglietto</p>
+                <span id="ticket_price">
+                </span>
+            </div>
+        </div> -->
 
 
     </main>

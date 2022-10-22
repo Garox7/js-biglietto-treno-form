@@ -1,3 +1,11 @@
+:root {
+    --bg-gradient: linear-gradient(-45deg, #0245a6, #23a6d5);
+    --bg-lightgray: #ecf3f3;
+    --color-blue-primary: #0245a6;
+    --color-blue-secondary: #3a5963;
+
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +16,138 @@ html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    padding: 2rem;
+/**************************
+         HEADER
+**************************/
+header {
+    color: white;
+    background: var(--bg-gradient);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 125px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header__icon i {
+    font-size: 25px;
+    padding: 8px;
+}
+
+header .header__title {
+    font-size: 1.2rem;
+    padding: 10px 15px 5px;
+    font-weight: 400;
+}
+
+/**************************
+         MAIN
+**************************/
+main {
+    background-color: white;
+    width: 100vw;
+    height: calc(100vh - 125px);
+    position: relative;
+}
+
+.main__container {
+    max-width: 900px;
+    padding: 3rem 1rem;
+    margin: 0 auto;
+}
+
+.main__input {
+    margin-bottom: 1.5rem;
+    
+}
+
+.main__input label {
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.main__input__box {
+    position: relative;
+}
+
+.main__input__box input, .main__input__box select {
+    background-color: var(--bg-lightgray);
+    color: var(--color-blue-secondary);
+    width: 100%;
+    height: 4rem;
+    font-size: 1rem;
+    padding: 0 60px;
+    border: none;
+    border-radius: 8px;
+}
+
+.main__input__box input:focus, .main__input__box select:focus {
+    outline: none;
+    box-shadow: 0 6px 8px -8px rgba(0, 0, 0, 1);
+}
+
+
+.main__input__box i {
+    color: var(--color-blue-secondary);
+    font-size: 22px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+button {
+    background-color: var(--color-blue-primary);
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    height: 4rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+/**************************
+         TICKET
+**************************/
+.ticket {
+    background-color: var(--bg-lightgray);
+    width: 100%;
+    height: 60%;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ticket__close {
+    text-align: right;
+}
+
+.ticket__close i {
+    color: #3a5963;
+    padding: 5px;
+    font-size: 22px;
 }

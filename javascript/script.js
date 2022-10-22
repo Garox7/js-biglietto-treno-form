@@ -17,17 +17,29 @@ btnClick.addEventListener('click',
 
         //TICKET PRICE SET
         const ticketPrice = distance * 0.21;
+        const standardOffer = 'Offerta Sandard';
+        const specialOffer = 'Offerta Speciale';
 
         if (age == 'minorenne') {
             discountRate = 0.20;
-        
+            document.getElementById('offer').innerHTML = specialOffer;
+
+            console.log('offerta:', specialOffer)
+
+            
         } else if (age == 'over') {
             discountRate = 0.40;
-        
+            document.getElementById('offer').innerHTML = specialOffer;
+
+            console.log('offerta:', specialOffer)
+
         } else {
             discountRate = 0;
-        }
+            document.getElementById('offer').innerHTML = standardOffer;
 
+            console.log('offerta:', standardOffer)
+
+        }
 
         let totalPrice = ticketPrice - (ticketPrice * discountRate);
         totalPrice = parseFloat(totalPrice.toFixed(2))
