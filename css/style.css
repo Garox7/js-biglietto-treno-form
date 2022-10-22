@@ -134,7 +134,7 @@ button {
 .ticket {
     background-color: var(--bg-lightgray);
     width: 100%;
-    height: 60%;
+    height: 80%;
     padding: 1rem;
     border-radius: 20px 20px 0 0;
     position: absolute;
@@ -144,10 +144,37 @@ button {
 
 .ticket__close {
     text-align: right;
+    margin-bottom: 20px;
 }
 
 .ticket__close i {
     color: #3a5963;
     padding: 5px;
     font-size: 22px;
+}
+
+.ticket__box {
+    background-color: white;
+    /* height: 3rem; */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.ticket__box__label {
+    color: var(--color-blue-primary);
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.ticket__box__op {
+    color: var(--color-blue-secondary);
+    margin: 10px 0 5px;
+}
+
+#name.ticket__box__op {
+    text-transform: uppercase;
 }
