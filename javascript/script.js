@@ -1,9 +1,13 @@
 const btnClick = document.getElementById('button');
-console.log(btnClick)
+const openTicket = document.querySelector('.ticket');
+
+//console.log(btnClick)
 
 btnClick.addEventListener('click',
     function () {
         console.log('Hai cliccato! bravo!')
+
+        openTicket.className += ' show';
 
         //NAME
         let userName = document.getElementById("user_name").value;
@@ -26,7 +30,6 @@ btnClick.addEventListener('click',
 
             console.log('offerta:', specialOffer)
 
-            
         } else if (age == 'over') {
             discountRate = 0.40;
             document.getElementById('offer').innerHTML = specialOffer;
@@ -41,6 +44,18 @@ btnClick.addEventListener('click',
 
         }
 
+        //SECTOR ASSIGN
+        const sectorNumber = Math.floor(Math.random() * 11) + 1;
+        document.getElementById('sector').innerHTML = sectorNumber;
+
+        console.log('Carrozza:', sectorNumber)
+
+        //BOOKING ID ASSIGN
+        const bookingId = Math.floor(Math.random() * 100001) + 1000;
+        document.getElementById('booking-code').innerHTML = bookingId;
+
+        console.log('Codice prenotazione:', bookingId)
+
         let totalPrice = ticketPrice - (ticketPrice * discountRate);
         totalPrice = parseFloat(totalPrice.toFixed(2))
         document.getElementById('ticket_price').innerHTML =  '€' +  totalPrice;
@@ -51,5 +66,15 @@ btnClick.addEventListener('click',
         console.log('Prezzo biglietto: €' + ticketPrice)
         console.log('Prezzo bisglietto con sconto: €' + totalPrice)
 
+    }
+);
+
+const closeTicket = document.getElementById('close-btn');
+
+closeTicket.addEventListener('click',
+    function () {
+        console.log('Hai chiuso! bravo!')
+        
+        openTicket.classList.remove('show');
     }
 );
